@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рулетка</title>
+    <style>
+        /* Стили для рулетки */
+        .rouletteWheel {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            margin: 50px auto;
+        }
+        .rouletteNumber {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Рулетка</h1>
+    <div class="rouletteWheel">
+        <div class="rouletteNumber">0</div>
+    </div>
+</body>
+</html>
