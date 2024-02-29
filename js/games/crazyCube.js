@@ -1,4 +1,4 @@
-const cube = document.querySelector(".cube");
+const cube = document.querySelector(".cube-wrap");
 
 function rollDice() {
   return Math.floor(Math.random() * 6) + 1;

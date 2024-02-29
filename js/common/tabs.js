@@ -3,6 +3,14 @@ document.querySelectorAll(".tab-buttons button").forEach((button) => {
     const tabId = button.dataset.target;
     // Переключить на выбранный таб
     openTab(tabId);
+    // Установить класс active для выбранной кнопки и удалить его для остальных
+    document.querySelectorAll(".tab-buttons button").forEach((btn) => {
+      if (btn === button) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
   });
 });
 

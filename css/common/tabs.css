@@ -1,7 +1,15 @@
 .tab {
   display: none;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .tab.active {
   display: block;
+}
+
+.tab-buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
