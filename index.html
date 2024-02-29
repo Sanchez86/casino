@@ -1,36 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casino</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- <button class="modal-trigger" data-target="myModal">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Modal Content</h2>
+            <p>This is a modal window!</p>
+        </div>
+    </div> -->
+
     <div class="tab-buttons">
-        <button id="crazyCubeButton" data-target="crazyCube">Crazy Cube</button>
-        <button id="oneArmedBanditButton" data-target="oneArmedBandit">One Armed Bandit</button>
-        <button id="rouletteButton" data-target="roulette">Roulette</button>
+      <button id="crazyCubeButton" data-target="crazyCube">Crazy Cube</button>
+      <button id="oneArmedBanditButton" data-target="oneArmedBandit">
+        One Armed Bandit
+      </button>
+      <button id="rouletteButton" data-target="roulette">Roulette</button>
     </div>
 
     <div id="crazyCube" class="tab">
-        <h2>Crazy Cube</h2>
-        <p>Описание игры Crazy Cube</p>
+      <h2>Crazy Cube</h2>
+
+      <button id="startButton">Start</button>
+      <div class="cube" id="cube">
+        <div class="face front">
+          <div class="dot"></div>
+        </div>
+        <div class="face back">
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="face right">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="face left">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="face top">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="face bottom">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
     </div>
 
     <div id="oneArmedBandit" class="tab">
-        <h2>One Armed Bandit</h2>
-        <p>Описание игры One Armed Bandit</p>
+      <h2>One Armed Bandit</h2>
+      <p>Описание игры One Armed Bandit</p>
     </div>
 
     <div id="roulette" class="tab">
-        <h2>Roulette</h2>
-        <p>Описание игры Roulette</p>
+      <h2>Roulette</h2>
+      <p>Описание игры Roulette</p>
     </div>
 
     <script src="js/games/games.js"></script>
-    <script src="js/games/crazyCube.js"></script>
     <script src="js/common/tabs.js"></script>
-    <script src="js/script.js"></script>
-</body>
+    <script src="js/common/modals.js"></script>
+    <script src="js/games/crazyCube.js"></script>
+  </body>
 </html>
