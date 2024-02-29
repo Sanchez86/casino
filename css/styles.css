@@ -1,0 +1,12 @@
+@import url("reset.css");
+
+/* Общие компоненты */
+@import url("common/buttons.css");
+@import url("common/forms.css");
+@import url("common/modals.css");
+@import url("common/tabs.css");
+
+/* Стили для игр */
+@import url("games/crazyCube.css");
+@import url("games/oneArmedBandit.css");
+@import url("games/roulette.css");

@@ -1,0 +1,103 @@
+.cube {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin: 50px auto;
+  perspective: 600px;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face.front {
+  transform: translateZ(50px);
+}
+
+.face.back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.face.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.face.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.face.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+/* Анимация для показа 1 */
+@keyframes rotateOne {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* Анимация для показа 2 */
+@keyframes rotateTwo {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(180deg) rotateZ(0deg);
+  }
+}
+
+/* Анимация для показа 3 */
+@keyframes rotateThree {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(120deg) rotateZ(0deg);
+  }
+}
+
+/* Анимация для показа 4 */
+@keyframes rotateFour {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(90deg) rotateZ(0deg);
+  }
+}
+
+/* Анимация для показа 5 */
+@keyframes rotateFive {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(60deg) rotateZ(0deg);
+  }
+}
+
+/* Анимация для показа 6 */
+@keyframes rotateSix {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(30deg) rotateZ(0deg);
+  }
+}

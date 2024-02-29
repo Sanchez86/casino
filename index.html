@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казино</title>
+    <title>Casino</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <button onclick="loadGame('crazyCube.html')">Crazy Cube</button>
-    <button onclick="loadGame('oneArmedBandit.html')">One-Armed Bandit</button>
-    <button onclick="loadGame('roulette.html')">Roulette</button>
+    <div class="tab-buttons">
+        <button id="crazyCubeButton" data-target="crazyCube">Crazy Cube</button>
+        <button id="oneArmedBanditButton" data-target="oneArmedBandit">One Armed Bandit</button>
+        <button id="rouletteButton" data-target="roulette">Roulette</button>
+    </div>
 
-    <div id="gameContainer"></div>
+    <div id="crazyCube" class="tab">
+        <h2>Crazy Cube</h2>
+        <p>Описание игры Crazy Cube</p>
+    </div>
 
-    <script>
-        function loadGame(gameUrl) {
-            document.getElementById('gameContainer').innerHTML = `<iframe src="${gameUrl}" style="width: 100%; height: 400px; border: none;"></iframe>`;
-        }
-    </script>
+    <div id="oneArmedBandit" class="tab">
+        <h2>One Armed Bandit</h2>
+        <p>Описание игры One Armed Bandit</p>
+    </div>
+
+    <div id="roulette" class="tab">
+        <h2>Roulette</h2>
+        <p>Описание игры Roulette</p>
+    </div>
+
+    <script src="js/games/games.js"></script>
+    <script src="js/games/crazyCube.js"></script>
+    <script src="js/common/tabs.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
