@@ -65,3 +65,18 @@ body {
 .lampsLeft .lamp {
   transform: rotateZ(90deg);
 }
+
+.switcher {
+  width: 60px;
+  height: 81px;
+  background-size: contain;
+  background-image: url("../../images/on.png");
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  cursor: pointer;
+}
+
+.switcher.active {
+  background-image: url("../../images/off.png");
+}

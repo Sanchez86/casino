@@ -48,24 +48,8 @@
   animation: rotate 10s linear forwards;
 }
 
-.animate .front {
-  animation: frontFinish 11s linear forwards;
-}
-
 .animate.cube-wrap {
   animation: scaled 10s linear forwards;
-}
-
-@keyframes frontFinish {
-  0% {
-    transform: translateZ(100px);
-  }
-  90% {
-    transform: translateZ(100px);
-  }
-  100% {
-    transform: rotateX(90deg) translateZ(900px);
-  }
 }
 
 @keyframes scaled {

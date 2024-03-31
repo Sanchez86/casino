@@ -17,6 +17,8 @@
         </div>
     </div> -->
 
+    <button id="on-off" class="switcher"></button>
+
     <div class="lampsTop"></div>
     <div class="lampsRight"></div>
     <div class="lampsBottom"></div>
@@ -30,66 +32,74 @@
       <button id="rouletteButton" class="button" data-target="roulette">Roulette</button>
     </div>
 
-    <div id="crazyCube" class="tab">
-      <h2>Crazy Cube</h2>
-
-      <div class="game-wrap">
-        <div class="cube-place">
-          <div class="cube-wrap">
-            <div class="cube" id="cube">
-              <div class="face front">
-                <div class="dot"></div>
-              </div>
-              <div class="face back">
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="face right">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="face left">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="face top">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="face bottom">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+    <div class="tab-content">
+      <div id="crazyCube" class="tab">
+        <div class="game-wrap">
+          <div class="cube-place">
+            <div class="cube-wrap">
+              <div class="cube" id="cube">
+                <div class="face front">
+                  <div class="dot"></div>
+                </div>
+                <div class="face back">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="face right">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="face left">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="face top">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="face bottom">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
               </div>
             </div>
+            <button id="startButton" class="button">Start</button>
           </div>
-          <button id="startButton" class="button">Start</button>
         </div>
       </div>
-    </div>
-
-    <div id="oneArmedBandit" class="tab">
-      <h2>One Armed Bandit</h2>
-      <p>Описание игры One Armed Bandit</p>
-    </div>
-
-    <div id="roulette" class="tab">
-      <h2>Roulette</h2>
-      <p>Описание игры Roulette</p>
+  
+      <div id="oneArmedBandit" class="tab">
+        <h2>One Armed Bandit</h2>
+        <p>Описание игры One Armed Bandit</p>
+      </div>
+  
+      <div id="roulette" class="tab">
+        <h2>Roulette</h2>
+        <p>Описание игры Roulette</p>
+      </div>
+  
+      <div class="wallet-container">
+          <h2>Wallet</h2>
+          <div class="balance">Balance: <span id="balance-amount">1000</span></div>
+          <button id="add-funds">Deposit</button>
+          <button id="withdraw-funds">Withdraw</button>
+      </div>
     </div>
 
     <script src="js/games/games.js"></script>
     <script src="js/common/tabs.js"></script>
     <script src="js/common/modals.js"></script>
+    <script src="js/common/lamps.js"></script>
     <script src="js/games/crazyCube.js"></script>
     <script src="js/script.js"></script>
   </body>
