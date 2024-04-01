@@ -62,3 +62,16 @@
   transform: scale(0.95);
   box-shadow: none;
 }
+
+.startButton {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+.startButton.active {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+#again {
+  display: none;
+}

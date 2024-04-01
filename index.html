@@ -13,8 +13,8 @@
           <div class="modal-content">
             <span class="modal-close">&times;</span>
             <h2>Add Deposit</h2>
-            <input type="number" />
-            <button>Add</button>
+            <input type="number" id="addDeposit"/>
+            <button id="addDepositHandle">Add</button>
           </div>
         </div>
 
@@ -83,23 +83,26 @@
                       </div>
                     </div>
                   </div>
-                  <button id="startButton" class="button">Start</button>
+                  <button id="startButton" class="startButton button">Start</button>
                 </div>
               </div>
               <div class="bets-wrap">
                 <div class="bets">
-                  <div>1</div>
-                  <div>2</div>
-                  <div>3</div>
-                  <div>4</div>
-                  <div>5</div>
-                  <div>6</div>
+                  <div class="btn" data-number="1">1</div>
+                  <div class="btn" data-number="2">2</div>
+                  <div class="btn" data-number="3">3</div>
+                  <div class="btn" data-number="4">4</div>
+                  <div class="btn" data-number="5">5</div>
+                  <div class="btn" data-number="6">6</div>
                 </div>
 
                 <div class="data">
-                  <div>Your bid:<span class="bid">10</span></div>
+                  <div>Your bid:<span class="bid">100</span></div>
                   <div>
                     Your potential winnings:<span class="winnings">1000</span>
+                  </div>
+                  <div>
+                    <button id="again" class="button">Again</button>
                   </div>
                 </div>
               </div>
@@ -115,7 +118,7 @@
                 
 
                 <div class="data">
-                  <div>Your bid:<span class="bid">10</span></div>
+                  <div>Your bid:<span class="bid">100</span></div>
                   <div>
                     Your potential winnings:<span class="winnings">1000</span>
                   </div>
@@ -158,8 +161,8 @@
     <script src="js/games/games.js"></script>
     <script src="js/common/tabs.js"></script>
     <script src="js/common/modals.js"></script>
-    <script src="js/common/lamps.js"></script>
     <script src="js/common/wallet.js"></script>
+    <script src="js/common/lamps.js"></script>
     <script src="js/games/crazyCube.js"></script>
   </body>
 </html>

@@ -1,3 +1,6 @@
+const balanceAmount = document.getElementById("balance-amount");
+balanceAmount.innerText = getAccount();
+
 function initAccount() {
   if (!localStorage.getItem("account")) {
     localStorage.setItem("account", "1000");
@@ -12,6 +15,7 @@ function updateAccount(amount) {
   let currentAmount = parseInt(localStorage.getItem("account"));
   currentAmount += amount;
   localStorage.setItem("account", currentAmount.toString());
+  balanceAmount.innerText = getAccount();
 }
 
 initAccount();
@@ -25,5 +29,11 @@ console.log("Текущий счет:", currentBalance);
 // const losses = -200;
 // updateAccount(losses);
 
-const balanceAmount = document.getElementById("balance-amount");
-balanceAmount.innerText = getAccount();
+function addDepositHandle() {
+  const sum = document.getElementById("addDeposit").value;
+
+  updateAccount(+sum);
+  closeModal();
+}
+const addMoney = document.getElementById("addDepositHandle");
+addMoney.addEventListener("click", addDepositHandle);
