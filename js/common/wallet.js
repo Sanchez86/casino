@@ -1,34 +1,50 @@
-class ExchangeRateService {
-  constructor() {
-    this.apiUrl =
-      "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
+class CurrencyService {
+  constructor(apiUrl) {
+    this.apiUrl = apiUrl;
   }
 
-  async fetchExchangeRates() {
+  async fetchCurrency() {
     try {
       const response = await fetch(this.apiUrl);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error("Ошибка при получении данных:", error);
-      throw new Error("Ошибка при получении данных");
+      console.error("Error fetching currency data:", error);
+      throw new Error("Error fetching currency data");
     }
   }
 }
 
-const exchangeRateService = new ExchangeRateService();
+const currencyService = new CurrencyService(
+  "https://api.monobank.ua/bank/currency"
+);
 
-exchangeRateService
-  .fetchExchangeRates()
-  .then((data) => {
-    console.log("Полученные данные:", data);
-  })
-  .catch((error) => {
-    console.error("Ошибка:", error.message);
-  });
+let usdRate = null;
 
-const balanceAmount = document.getElementById("balance-amount");
-balanceAmount.innerText = getAccount();
+async function initialize() {
+  try {
+    const data = await currencyService.fetchCurrency();
+    const usdData = data.find(
+      (currency) =>
+        currency.currencyCodeA === 840 && currency.currencyCodeB === 980
+    );
+    if (usdData) {
+      usdRate = usdData.rateBuy;
+      const usdId = document.getElementById("usd-id");
+      if (usdId) {
+        usdId.innerText = (getAccount() / usdRate).toFixed(2);
+      }
+    }
+    updateAccountDisplay();
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+
+  balanceAmount.innerText = getAccount();
+}
 
 function initAccount() {
   if (!localStorage.getItem("account")) {
@@ -41,28 +57,37 @@ function getAccount() {
 }
 
 function updateAccount(amount) {
-  let currentAmount = parseInt(localStorage.getItem("account"));
+  let currentAmount = parseFloat(localStorage.getItem("account"));
   currentAmount += amount;
   localStorage.setItem("account", currentAmount.toString());
-  balanceAmount.innerText = getAccount();
+  balanceAmount.innerText = currentAmount.toFixed(2);
+  updateAccountDisplay();
+}
+
+function updateAccountDisplay() {
+  if (usdRate !== null) {
+    const usdId = document.getElementById("usd-id");
+    let currentAmount = parseFloat(localStorage.getItem("account"));
+    if (usdId) {
+      usdId.innerText = (currentAmount / usdRate).toFixed(2) + "$";
+    }
+  }
 }
 
 initAccount();
+initialize();
+
+const balanceAmount = document.getElementById("balance-amount");
+balanceAmount.innerText = getAccount();
 
 const currentBalance = getAccount();
-console.log("Текущий счет:", currentBalance);
-
-// const winnings = 500;
-// updateAccount(winnings);
-
-// const losses = -200;
-// updateAccount(losses);
+console.log("Current balance:", currentBalance);
 
 function addDepositHandle() {
-  const sum = document.getElementById("addDeposit").value;
-
-  updateAccount(+sum);
+  const sum = parseFloat(document.getElementById("addDeposit").value);
+  updateAccount(sum);
   closeModal();
 }
+
 const addMoney = document.getElementById("addDepositHandle");
 addMoney.addEventListener("click", addDepositHandle);
