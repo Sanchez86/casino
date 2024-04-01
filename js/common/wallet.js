@@ -1,3 +1,32 @@
+class ExchangeRateService {
+  constructor() {
+    this.apiUrl =
+      "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
+  }
+
+  async fetchExchangeRates() {
+    try {
+      const response = await fetch(this.apiUrl);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Ошибка при получении данных:", error);
+      throw new Error("Ошибка при получении данных");
+    }
+  }
+}
+
+const exchangeRateService = new ExchangeRateService();
+
+exchangeRateService
+  .fetchExchangeRates()
+  .then((data) => {
+    console.log("Полученные данные:", data);
+  })
+  .catch((error) => {
+    console.error("Ошибка:", error.message);
+  });
+
 const balanceAmount = document.getElementById("balance-amount");
 balanceAmount.innerText = getAccount();
 
