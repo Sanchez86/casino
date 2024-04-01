@@ -7,110 +7,151 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- <button class="modal-trigger" data-target="myModal">Open Modal</button>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+    <div class="content">
+      <div class="content-bg">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <h2>Modal Content</h2>
-            <p>This is a modal window!</p>
+            <h2>Add Deposit</h2>
+            <input type="number" />
+            <button>Add</button>
+          </div>
         </div>
-    </div> -->
 
-    <button id="on-off" class="switcher"></button>
+        <button id="on-off" class="switcher"></button>
 
-    <div class="lampsTop"></div>
-    <div class="lampsRight"></div>
-    <div class="lampsBottom"></div>
-    <div class="lampsLeft"></div>
+        <div class="lampsTop"></div>
+        <div class="lampsRight"></div>
+        <div class="lampsBottom"></div>
+        <div class="lampsLeft"></div>
 
-    <div class="tab-buttons">
-      <button id="crazyCubeButton" class="button" data-target="crazyCube">Crazy Cube</button>
-      <button id="oneArmedBanditButton" class="button" data-target="oneArmedBandit">
-        One Armed Bandit
-      </button>
-      <button id="rouletteButton" class="button" data-target="roulette">Roulette</button>
-    </div>
+        <div class="tab-buttons">
+          <button id="crazyCubeButton" class="button" data-target="crazyCube">
+            Crazy Cube
+          </button>
+          <button
+            id="oneArmedBanditButton"
+            class="button"
+            data-target="oneArmedBandit"
+          >
+            One Armed Bandit
+          </button>
+          <button id="rouletteButton" class="button" data-target="roulette">
+            Roulette
+          </button>
+        </div>
 
-    <div class="tab-content">
-      <div id="crazyCube" class="tab">
-        <div class="flex">
-          <div class="game-wrap">
-            <div class="cube-place">
-              <div class="cube-wrap">
-                <div class="cube" id="cube">
-                  <div class="face front">
-                    <div class="dot"></div>
+        <div class="tab-content">
+          <div id="crazyCube" class="tab">
+            <div class="flex">
+              <div class="game-wrap">
+                <div class="cube-place">
+                  <div class="cube-wrap">
+                    <div class="cube" id="cube">
+                      <div class="face front">
+                        <div class="dot"></div>
+                      </div>
+                      <div class="face back">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                      <div class="face right">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                      <div class="face left">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                      <div class="face top">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                      <div class="face bottom">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="face back">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="face right">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="face left">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="face top">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="face bottom">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                  <button id="startButton" class="button">Start</button>
+                </div>
+              </div>
+              <div class="bets-wrap">
+                <div class="bets">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                </div>
+
+                <div class="data">
+                  <div>Your bid:<span class="bid">10</span></div>
+                  <div>
+                    Your potential winnings:<span class="winnings">1000</span>
                   </div>
                 </div>
               </div>
-              <button id="startButton" class="button">Start</button>
             </div>
           </div>
-          <div class="bets-wrap">
-            <div class="bets">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-              <div>5</div>
-              <div>6</div>
-            </div>
 
-            <div class="data">
-              <div>Your bid:<span class="bid">10</span></div>
-              <div>Your potential winnings:<span class="winnings">1000</span></div>
+          <div id="oneArmedBandit" class="tab">
+            <div class="flex">
+              <div class="game-wrap">
+                <p>Описание игры One Armed Bandit</p>
+              </div>
+              <div class="bets-wrap">
+                
+
+                <div class="data">
+                  <div>Your bid:<span class="bid">10</span></div>
+                  <div>
+                    Your potential winnings:<span class="winnings">1000</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div id="roulette" class="tab">
+            <div class="flex">
+              <div class="game-wrap">
+                <p>Описание игры Roulette</p>
+              </div>
+              <div class="bets-wrap">
+
+                <div class="data">
+                  <div>Your bid:<span class="bid">10</span></div>
+                  <div>
+                    Your potential winnings:<span class="winnings">1000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wallet-container">
+            <h2>Wallet</h2>
+            <div class="balance">
+              Balance: <span id="balance-amount"></span>
+            </div>
+            <button id="add-funds" class="modal-trigger" data-target="myModal">
+              Deposit
+            </button>
+            <button id="withdraw-funds">Withdraw</button>
           </div>
         </div>
-        
-      </div>
-  
-      <div id="oneArmedBandit" class="tab">
-        <h2>One Armed Bandit</h2>
-        <p>Описание игры One Armed Bandit</p>
-      </div>
-  
-      <div id="roulette" class="tab">
-        <h2>Roulette</h2>
-        <p>Описание игры Roulette</p>
-      </div>
-  
-      <div class="wallet-container">
-          <h2>Wallet</h2>
-          <div class="balance">Balance: <span id="balance-amount">1000</span></div>
-          <button id="add-funds">Deposit</button>
-          <button id="withdraw-funds">Withdraw</button>
       </div>
     </div>
 
@@ -118,7 +159,7 @@
     <script src="js/common/tabs.js"></script>
     <script src="js/common/modals.js"></script>
     <script src="js/common/lamps.js"></script>
+    <script src="js/common/wallet.js"></script>
     <script src="js/games/crazyCube.js"></script>
-    <script src="js/script.js"></script>
   </body>
 </html>

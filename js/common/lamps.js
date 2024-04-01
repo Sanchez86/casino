@@ -72,9 +72,9 @@ lampsContainers.forEach((container) => {
     container.classList.contains("lampsTop") ||
     container.classList.contains("lampsBottom")
   ) {
-    containerSize = screenWidth - 52;
+    containerSize = screenWidth - 220;
   } else {
-    containerSize = screenHeight - 360;
+    containerSize = screenHeight - 420;
   }
   const lampCount = countingLampsOnScreen(containerSize, lampSizePx);
   container.intervalIds = []; // Создаем массив для хранения идентификаторов интервалов в контейнере

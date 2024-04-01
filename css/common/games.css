@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+}
+.game-wrap {
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffac00;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(0 0 0 / 71%);
+}
