@@ -371,3 +371,9 @@
 .winnings {
   font-size: 24px;
 }
+
+#crazyCube .bets-wrap h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+#roulette .game-wrap {
+  background-image: url("../../images/table.png");
+  background-size: 660px;
+  background-position: 0px -70px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 43px;
+}
+
+#roulette .bets-wrap {
+  background-image: url("../../images/table.png");
+  background-size: 690px;
+  background-position: -406px -86px;
+}
