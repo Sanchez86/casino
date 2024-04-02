@@ -19,10 +19,115 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background-color: black;
   border-radius: 50%;
+  position: relative;
+}
+
+/* back 2 */
+.back .dot-1 {
+  right: 15px;
+  bottom: 20px;
+}
+.back .dot-2 {
+  right: -10px;
+  bottom: -20px;
+}
+
+/* right 3*/
+.right .dot-1 {
+  right: 10px;
+  bottom: 30px;
+}
+
+.right .dot-2 {
+  right: 0px;
+  bottom: 0px;
+}
+
+.right .dot-3 {
+  right: -10px;
+  bottom: -30px;
+}
+
+/* left 4*/
+.left .dot-1 {
+  right: 0px;
+  bottom: 30px;
+}
+
+.left .dot-2 {
+  right: 20px;
+  bottom: -30px;
+}
+
+.left .dot-3 {
+  right: -20px;
+  bottom: 30px;
+}
+
+.left .dot-4 {
+  right: 0px;
+  bottom: -30px;
+}
+
+/* top 5 */
+.top .dot-1 {
+  right: -10px;
+  bottom: 30px;
+}
+
+.top .dot-2 {
+  right: 10px;
+  bottom: -30px;
+}
+
+.top .dot-3 {
+  right: 0px;
+  bottom: 0px;
+}
+
+.top .dot-4 {
+  right: -10px;
+  bottom: -30px;
+}
+
+.top .dot-5 {
+  right: 10px;
+  bottom: 30px;
+}
+
+/* bottom 6 */
+.bottom .dot-1 {
+  right: -10px;
+  bottom: 30px;
+}
+
+.bottom .dot-2 {
+  right: -25px;
+  bottom: 30px;
+}
+
+.bottom .dot-3 {
+  right: -40px;
+  bottom: 30px;
+}
+
+.bottom .dot-4 {
+  right: 40px;
+  bottom: -30px;
+}
+
+.bottom .dot-5 {
+  right: 25px;
+  bottom: -30px;
+}
+
+.bottom .dot-6 {
+  right: 10px;
+  bottom: -30px;
 }
 
 .front {
