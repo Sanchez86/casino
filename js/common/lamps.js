@@ -53,7 +53,7 @@ switcher.addEventListener("click", function () {
 
 // Определение размеров основного контейнера. Пока что сделал фиксированное
 const screenWidth = 900;
-const screenHeight = 380;
+const screenHeight = 360;
 
 // Получение контейнеров для лампочек
 const lampsContainers = document.querySelectorAll(
