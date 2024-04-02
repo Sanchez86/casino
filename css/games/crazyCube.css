@@ -5,6 +5,7 @@
   transform-style: preserve-3d;
   transform: rotateX(-8deg) rotateY(16deg) rotateZ(-1deg);
   z-index: 100;
+  animation: 10s free-rotate infinite ease-in-out;
 }
 
 .face {
@@ -31,6 +32,7 @@
   right: 15px;
   bottom: 20px;
 }
+
 .back .dot-2 {
   right: -10px;
   bottom: -20px;
@@ -300,6 +302,18 @@
   }
   100% {
     transform: rotateX(82deg) rotateY(-1deg) rotateZ(-11deg);
+  }
+}
+
+@keyframes free-rotate {
+  0% {
+    transform: rotateX(-8deg) rotateY(16deg) rotateZ(-1deg);
+  }
+  50% {
+    transform: rotateX(-188deg) rotateY(186deg) rotateZ(-180deg);
+  }
+  100% {
+    transform: rotateX(-8deg) rotateY(16deg) rotateZ(-1deg);
   }
 }
 
